@@ -16,7 +16,7 @@ class spectrum:
     def __init__(self, energy):
         self.energy = energy
 
-    def spacing_ratio(self, n = 1):
+    def spacing_ratio(self, shift = 1, n = 1):
         """Computes level spacing ratios of the spectra."""
         s = self.energy[n:] - self.energy[:-n]
         r = s[ : -shift ]/np.roll(s, -shift)[:-shift]
